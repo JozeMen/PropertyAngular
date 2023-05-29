@@ -1,0 +1,40 @@
+<div class="table">
+  <table class="table">
+    <thead class="thead-dark">
+    <tr >
+      <th scope="col"></th>
+      <th scope="col">id</th>
+      <th scope="col">Объект имущества</th>
+      <th scope="col">Люди</th>
+<!--      <th scope="col">Handle</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let property of properties">
+      <th scope="row">
+<!--        <button type="button" class="btn btn-danger" (click)="deleteCommittee(committee.name)">Удалить</button>--></th>
+      <td >{{property.propertyId}}</td>
+      <td >{{property.name}}</td>
+      <td >{{property.propDescription}}</td>
+
+      <!--      Подробнее с списком людев-->
+<!--      <td ><p *ngFor="let person of committee.personDTOList">{{person.name}}</p></td>-->
+<!--      <button type="button" class="btn btn-success" *ngIf="isEditable === committee.name" (click)="editCommittee(committee.name, newName); ">Сохранить</button>-->
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="createForm">
+<form class="createForm">
+  <div class="form-group">
+    <label>Название объекта</label>
+    <input class="form-control" placeholder="Название объекта" type="newPropName"  name="createPropertyName" [(ngModel)]="newPropName"/>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Описание</label>
+    <input type="password" class="form-control" id="exampleInputPassword1"  placeholder="Описание" type="newPropDescription"  name="createPropertyName" [(ngModel)]="newPropDescription">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="createProperty(newPropName, newPropDescription)">Добавить</button>
+</form>
+</div>

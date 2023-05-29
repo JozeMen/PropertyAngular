@@ -1,0 +1,8 @@
+div.auth {
+  position: absolute;
+  float: right;
+}
+
+form.createForm {
+  margin-left: 25%;
+}
